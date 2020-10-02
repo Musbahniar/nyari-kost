@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from "react-router-dom";
+import "./App.css";
+
+
+import Home from "./pages/Home"
+import NavBar from './components/NavBar';
+import Koss from './pages/Koss'
+import Kotas from './pages/Kotas'
+import DetailKos from './pages/DetailKos'
+import Error from './pages/Error'
+import Tentang from './pages/About'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar/>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/koss" component={Koss} />
+        <Route exact path="/about" component={Tentang} />
+        <Route exact path="/kota/:kota" component={Kotas} />
+        <Route exact path="/koss/:slug" component={DetailKos} />
+        <Route component={Error} /> 
+      </Switch>
+    </>
   );
 }
 
