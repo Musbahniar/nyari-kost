@@ -12,8 +12,6 @@ export default class KossProvider extends Component {
   state = {
     koss: [],
     hasilFilter:[],
-    // sortedKoss: [],
-    // featuredKoss: [],
     kotaKoss:[],
     loading: true,
     kota: "all",
@@ -38,9 +36,7 @@ export default class KossProvider extends Component {
       let hargaMin = Math.min(...koss.map(item => item.harga));
       this.setState ({
         koss,
-        // featuredKoss,
         hasilFilter: koss,
-        // sortedKoss: koss,
         loading: false,
         harga: hargaMax,
         hargaMax,

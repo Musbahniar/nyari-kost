@@ -81,7 +81,7 @@ export default class DetailKos extends Component {
                 {akses ? '24 Jam' : 'Terbatas'}
               </h6>
               <h6>Untuk : {penghuni}</h6>
-              <h6>{sarapan && "free breakfast included"}</h6>
+              <h6>{sarapan && "Gratis Sarapan Pagi"}</h6>
             </article>
           </div>
         </section>
